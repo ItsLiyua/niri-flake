@@ -528,7 +528,7 @@
             (nixpkgs.lib.optionalAttrs (options ? home-manager) {
               home-manager.sharedModules = [
                 self.homeModules.config
-                { programs.niri.package = nixpkgs.lib.mkForce cfg.package; }
+                { programs.niri.package = nixpkgs.lib.mkIf cfg.enable (nixpkgs.lib.mkForce cfg.package); }
               ]
               ++ nixpkgs.lib.optionals (options ? stylix) [ self.homeModules.stylix ];
             })
