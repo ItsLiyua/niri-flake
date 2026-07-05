@@ -3743,6 +3743,7 @@
             (nullable leaf "variable-refresh-rate" cfg.variable-refresh-rate)
             (nullable leaf "scroll-factor" cfg.scroll-factor)
             (nullable leaf "tiled-state" cfg.tiled-state)
+            (nullable leaf "allow-tearing" cfg.allow-tearing)
           ])
         ]))
         (each cfg.layer-rules (cfg: [
