@@ -2775,6 +2775,11 @@
                     opacity = nullable types.float // {
                       description = window-rule-descriptions.opacity;
                     };
+                    allow-tearing = nullable types.bool // {
+                      description = ''
+                        Whether to disable vsync for this window.
+                      '';
+                    };
                   }
                   (
                     let
